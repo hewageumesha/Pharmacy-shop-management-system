@@ -1,21 +1,25 @@
-.one{
-  border-radius: 5px;
+.one {
+  border-radius: 12px; /* Modern rounded corners */
   box-sizing: border-box;
-  background-color: #f2f2f2;
-  padding:30px;
-  padding-left: 60px;
-  width:1175px;
-  float:right;
-  margin-right:58px;
-  margin-top:20px;
-  margin-bottom:50px;
-  font-family:Arial;
+  background-color: #f8f9fa; /* Light gray background for a softer look */
+  padding: 40px 60px; /* Combined padding for simplicity */
+  max-width: 800px; /* Balanced layout */
+  margin: 20px auto; /* Center the form */
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+  border: 1px solid #ced4da; /* Softer gray border */
+  float: none; /* Clear float */
 }
 
 .column {
   float: left;
-  width: 50%;
- }
+  width: 48%; /* Spacing between columns */
+  margin-right: 4%; /* Added margin for spacing */
+}
+
+.column:last-child {
+  margin-right: 0; /* Remove margin from the last column */
+}
 
 .row:after {
   content: "";
@@ -23,34 +27,44 @@
   clear: both;
 }
 
+input[type=text], input[type=number], input[type=date], select {
+  width: 100%; /* Full width for better alignment */
+  padding: 14px;
+  border: 1px solid #adb5bd; /* Softer border color */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #ffffff; /* White background for input fields */
+  font-size: 16px; /* Professional font size */
+  transition: border-color 0.3s ease-in-out; /* Smooth focus effect */
+}
 
-input[type=text],input[type=number],input[type=date],select {
-  width: 80%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+input[type=text]:focus, input[type=number]:focus, input[type=date]:focus, select:focus {
+  border-color: #17a2b8; /* Teal highlight on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(23, 162, 184, 0.5); /* Subtle glow effect on focus */
 }
 
 label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
+  padding: 12px 0;
+  display: block; /* Better layout */
+  color: #343a40; /* Dark gray for readability */
+  font-size: 16px; /* Increased font size */
 }
 
-input[type=submit]{
-  background-color: #0077b3;
+input[type=submit] {
+  background-color: #28a745; /* Green for the submit button */
   color: white;
-  padding: 12px 20px;
+  padding: 14px 32px; /* Larger padding */
   border: none;
-  border-radius: 4px;
+  border-radius: 8px; /* Rounded corners */
   cursor: pointer;
-  display:inline-block;
-  margin-top:20px;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out, transform 0.2s; /* Smooth transitions */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
-
 
 input[type=submit]:hover {
-  background-color: #0088cc;
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
 }
-
-
-

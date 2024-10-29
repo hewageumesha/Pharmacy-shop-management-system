@@ -1,51 +1,73 @@
 #table1 {
-  font-family: Arial;
+  font-family: Arial, sans-serif; /* Added a sans-serif fallback */
   border-collapse: collapse;
-  margin-top:50px;
-  margin-right:25px;
+  margin-top: 50px;
+  margin-right: 25px;
   width: 80%;
-  overflow:auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
 
 #table1 td, #table1 th {
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: 1px solid #ddd; /* Light border for subtlety */
+  padding: 12px; /* Increased padding for better spacing */
+  text-align: left; /* Left align for better readability */
 }
 
-#table1 tr:nth-child(even){background-color: #f2f2f2;}
+#table1 tr:nth-child(even) {
+  background-color: #f9f9f9; /* Slightly lighter background for better contrast */
+}
 
-#table1 tr:hover {background-color: #ddd;}
+#table1 tr:hover {
+  background-color: #f1f1f1; /* Light gray on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
 
 #table1 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 15px; /* Increased padding */
+  padding-bottom: 15px; /* Increased padding */
   text-align: left;
-  background-color: #0077b3;
+  background-color: #0077b3; /* Darker blue for the header */
   color: white;
+  border-bottom: 2px solid #005f8a; /* Darker bottom border for emphasis */
 }
 
+/* Button Styles */
 .button1 {
-  border:none;
+  border: none;
   color: white;
-  padding: 10px 24px;
+  padding: 10px 20px; /* Adjusted padding for better size */
   text-align: center;
   text-decoration: none;
   display: inline-block;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth background and transform transitions */
 }
 
-.edit-btn
-{
-	background-color:#2E8B57;
+.edit-btn {
+  background-color: #2E8B57; /* Green color for edit */
 }
 
-.del-btn
-{
-	background-color:#800000;
+.edit-btn:hover {
+  background-color: #238b45; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
-.view-btn
-{
-	background-color:#0077b3;
+.del-btn {
+  background-color: #800000; /* Dark red for delete */
+}
+
+.del-btn:hover {
+  background-color: #a30000; /* Brighter red on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.view-btn {
+  background-color: #0077b3; /* Blue for view */
+}
+
+.view-btn:hover {
+  background-color: #005f8a; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
 }
