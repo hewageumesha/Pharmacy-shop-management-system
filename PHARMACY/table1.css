@@ -1,46 +1,184 @@
+/* Table 1 Styles */
 #table1 {
-  font-family: Arial;
-  border-collapse: collapse;
-  margin-top:50px;
-  margin-right:25px;
-  width: 70%;
-  overflow:auto;
+  max-width: 800px;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8; /* Softer gray background */
+  color: #0b0a2e; /* Text color */
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px; /* Softer rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow for better depth */
+  border-collapse: collapse; /* Collapse borders for a cleaner look */
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden;
+  float: none; /* Clear float */
 }
 
 #table1 td, #table1 th {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 14px 20px; /* Increased padding for spacious cells */
+  text-align: left;
+  font-family: Arial, sans-serif;
+  font-weight: 100;
 }
 
-#table1 tr:nth-child(even){background-color: #f2f2f2;}
+#table1 tr:nth-child(even) {
+  background-color: #f3f3f3; /* Slightly lighter background for alternate rows */
+  font-family: Arial, sans-serif;
+  font-weight: 100;
+}
 
-#table1 tr:hover {background-color: #ddd;}
+#table1 tr:hover {
+  background-color: #ececec; /* Darker gray on hover */
+  transition: background-color 0.3s ease-in-out;
+}
 
 #table1 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   text-align: left;
-  background-color: #0077b3;
+  background-color: #005a99; /* Darker blue header */
   color: white;
+  border-bottom: 3px solid #003e6b; /* More pronounced bottom border */
+  letter-spacing: 0.5px; /* Slightly increase spacing for readability */
+  font-weight: bold;
 }
 
-.button1 {
-  border:none;
+/* Table 2 Styles */
+#table2 {
+  max-width: 300px;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8; /* Softer gray background */
+  color: #0b0a2e; /* Text color */
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px; /* Softer rounded corners */
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow for better depth */
+  border-collapse: collapse; /* Collapse borders for a cleaner look */
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden;
+  float: none; /* Clear float */
+  margin-left: 50px;
+}
+
+#table2 td, #table2 th {
+  border: 1px solid #ddd;
+  padding: 14px 20px; /* Increased padding for spacious cells */
+  text-align: left;
+  font-family: Arial, sans-serif;
+  font-weight: 100;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #0b0a2e;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#table2 tr:nth-child(even) {
+  background-color: #f3f3f3; /* Slightly lighter background for alternate rows */
+  font-family: Arial, sans-serif;
+  font-weight: 100;
+}
+
+#table2 tr:hover {
+  background-color: #ececec; /* Darker gray on hover */
+  transition: background-color 0.3s ease-in-out;
+}
+
+#table2 th {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-align: left;
+  background-color: #005a99; /* Darker blue header */
   color: white;
-  padding: 10px 24px;
+  border-bottom: 3px solid #003e6b; /* More pronounced bottom border */
+  letter-spacing: 0.5px; /* Slightly increase spacing for readability */
+  font-weight: bold;
+}
+
+/* Button Styles */
+.button1 {
+  border: none;
+  color: white;
+  padding: 12px 24px; /* Adjusted padding for improved button size */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 4px 2px;
+  margin: 5px 3px;
   cursor: pointer;
+  border-radius: 8px; /* More rounded corners */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  font-size: 14px; /* Slightly larger text */
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
 }
 
-.edit-btn
-{
-	background-color:#2E8B57;
+.edit-btn {
+  background-color: #28a745; /* Brighter green */
 }
 
-.del-btn
-{
-	background-color:#800000;
+.edit-btn:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.07); /* Slightly enlarge on hover */
+}
+
+.del-btn {
+  background-color: #dc3545; /* Red for delete */
+}
+
+.del-btn:hover {
+  background-color: #c82333; /* Brighter red on hover */
+  transform: scale(1.07); /* Slightly enlarge on hover */
+}
+
+/* Table 3 Styles */
+#table3 {
+  max-width: 1200px;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8; /* Softer gray background */
+  color: #0b0a2e; /* Text color */
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px; /* Softer rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow for better depth */
+  border-collapse: collapse; /* Collapse borders for a cleaner look */
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden;
+  float: none; /* Clear float */
+  margin-left: 50px;
+}
+
+#table3 td, #table3 th {
+  border: 1px solid #ddd;
+  padding: 14px 20px; /* Increased padding for spacious cells */
+  text-align: left;
+  font-family: Arial, sans-serif;
+  font-weight: 100;
+}
+
+#table3 tr:nth-child(even) {
+  background-color: #f3f3f3; /* Slightly lighter background for alternate rows */
+  font-family: Arial, sans-serif;
+  font-weight: 100;
+}
+
+#table3 tr:hover {
+  background-color: #ececec; /* Darker gray on hover */
+  transition: background-color 0.3s ease-in-out;
+}
+
+#table3 th {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-align: left;
+  background-color: #005a99; /* Darker blue header */
+  color: white;
+  border-bottom: 3px solid #003e6b; /* More pronounced bottom border */
+  letter-spacing: 0.5px; /* Slightly increase spacing for readability */
+  font-weight: bold;
 }

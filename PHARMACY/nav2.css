@@ -1,12 +1,22 @@
+/* General Body Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light background for contrast */
+}
+
+/* Header Styles */
 .header {
   padding: 60px;
   text-align: center;
-  background: #1abc9c;
+  background: #7E60BF; /* Use provided purple color */
   color: white;
-  font-size: 30px;
+  font-size: 36px; /* Increased font size */
   margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
 }
 
+/* Side Navigation Styles */
 .sidenav {
   height: 100%;
   width: 15%;
@@ -14,19 +24,19 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #003366;
-  padding-top: 10px;
-  padding-left:5px;
-  font-family:Arial;
-  
+  background-color: #433878; /* Use provided dark blue color */
+  padding-top: 20px;
+  padding-left: 10px;
+  font-family: Arial, sans-serif;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Side shadow */
+  transition: width 0.3s; /* Smooth transition */
 }
 
-
-.sidenav a,.dropdown-btn {
-  padding: 6px 8px 6px 16px;
+.sidenav a, .dropdown-btn {
+  padding: 10px 15px; /* Increased padding for better spacing */
   text-decoration: none;
   font-size: 20px;
-  color: #bfbfbf;
+  color: #FFE1FF; /* Use provided light pink color */
   display: block;
   border: none;
   background: none;
@@ -34,27 +44,26 @@
   text-align: left;
   cursor: pointer;
   outline: none;
+  transition: color 0.3s; /* Smooth color transition */
 }
 
 .sidenav a:hover, .dropdown-btn:hover {
-  color: #f1f1f1;
+  color: #E4B1F0; /* Use provided lavender color on hover */
 }
 
-
 .active {
-  background-color: #004d99;
+  background-color: #7E60BF; /* Highlight for active link */
   color: white;
 }
 
-
+/* Dropdown Container Styles */
 .dropdown-container {
   display: none;
-  background-color: #004d99;
-  padding-left: 8px;
+  background-color: #433878; /* Darker blue */
+  padding-left: 20px; /* Indentation for dropdown items */
 }
 
-
-
+/* Icon Styles */
 i {
   border: solid white;
   border-width: 0 3px 3px 0;
@@ -62,31 +71,34 @@ i {
   padding: 3px;
 }
 
+/* Down Arrow Rotation */
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
 
-
-
+/* Media Query for Responsiveness */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px; /* Slightly smaller font */
+  }
 }
 
+/* Top Navigation Styles */
 .topnav {
   overflow: hidden;
-  background-color: #003366;
-  margin:0px;
-  vertical-align:top;
+  background-color: #433878; /* Dark blue */
+  margin: 0;
   width: 100%;
-  height:9%;
+  height: 60px; /* Defined height for top nav */
   position: fixed;
-  x-index: 1;
+  z-index: 1;
   top: 0;
   left: 0;
-  
-  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
 
 .topnav a {
@@ -95,34 +107,35 @@ i {
   padding: 20px 22px;
   text-decoration: none;
   font-size: 20px;
-  font-family:Arial;
-  color: #bfbfbf;
+  color: #FFE1FF; /* Light pink */
   display: block;
-  border: none;
-  background: none;
   cursor: pointer;
-  outline: none;
+  transition: color 0.3s; /* Smooth color transition */
 }
 
 .topnav a:hover {
-  color: #f1f1f1
+  color: #E4B1F0; /* Lighter lavender on hover */
 }
 
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #7E60BF; /* Purple for active link */
   color: white;
 }
 
+/* Header Styles */
 div.head {
-width:78%;
-font-family:Arial;
-background-color:#e6e6e6;
-color:#003366;
-float:right;
-margin-top:80px;
-margin-right:53px;
-margin-left:0px;
-top: 0;
-right: 0;
-overflow:hidden;
+   
+    max-width: 800px; /* Match width with .one */
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* Light gray for contrast */
+    color: #0b0a2e; /* Purple color text */
+    margin: 20px auto; /* Center align and same margin as .one */
+    padding: 20px; /* Added padding for spacing */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    overflow: hidden;
+    
+    float:none; /* Remove float to center align */
+  
+  
 }
