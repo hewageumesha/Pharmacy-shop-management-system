@@ -1,253 +1,320 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <?php
+    session_start();
+    include "config.php";
+    ?>
 
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="nav2.css">
-<link rel="stylesheet" type="text/css" href="form3.css">
-<link rel="stylesheet" type="text/css" href="table2.css">
-<title>
-New Sales
-</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="nav2.css">
+    <link rel="stylesheet" type="text/css" href="form4.css">
+    <link rel="stylesheet" type="text/css" href="nav2.css">
+    <link rel="stylesheet" type="text/css" href="form3.css">
+    <link rel="stylesheet" type="text/css" href="table2.css">
+    <title>Add Point of Sales
+    </title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .container {
+            margin: auto;
+            width: 80%;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        /* Custom styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidenav {
+            height: 100vh;
+            width: 300px;
+            background-color: #3D2B3A;
+            overflow-y: auto;
+            position: fixed;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .topnav {
+            background-color: #3D2B3A;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+            float: right;
+            padding-right: 80px;
+        }
+
+        .topnav h2 {
+            color: white;
+            text-align: left;
+            margin: 0;
+        }
+
+        .topnav h3 {
+            color: white;
+            text-align: right;
+            margin: 0;
+        }
+
+        .content {
+            margin-top: 60px;
+            padding-left: 260px;
+        }
+
+        
+        
+
+        /* Custom styles for alerts */
+        .custom-alert {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            display: none; /* Initially hidden */
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Additional input styles */
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%; /* Full width */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border 0.3s;
+        }
+
+        input[type="submit"] {
+            background-color: #7E60BF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #6A4E9A;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            // Add hover effect to the navigation buttons
+            $(".dropdown-btn").hover(function() {
+                $(this).css("background-color", "#7E60BF");
+                $(this).css("color", "white"); // Change text color on hover
+            }, function() {
+                $(this).css("background-color", "");
+                $(this).css("color", ""); // Reset text color
+            });
+
+            // Dropdown functionality with animation
+            $(".dropdown-btn").click(function() {
+                $(this).toggleClass("active");
+                $(this).next(".dropdown-container").slideToggle(300); // Slide down/up animation
+            });
+        });
+    </script>
 </head>
 
 <body>
 
-		<div class="sidenav">
-			<h2 style="font-family:Arial; color:white; text-align:center;"> PHARMACIA </h2>
-			<a href="adminmainpage.php">Dashboard</a>
-			<button class="dropdown-btn">Inventory
-			<i class="down"></i>
-			</button>
-			<div class="dropdown-container">
-				<a href="inventory-add.php">Add New Medicine</a>
-				<a href="inventory-view.php">Manage Inventory</a>
-			</div>
-			<button class="dropdown-btn">Suppliers
-			<i class="down"></i>
-			</button>
-			<div class="dropdown-container">
-				<a href="supplier-add.php">Add New Supplier</a>
-				<a href="supplier-view.php">Manage Suppliers</a>
-			</div>
-			<button class="dropdown-btn">Stock Purchase
-			<i class="down"></i>
-			</button>
-			<div class="dropdown-container">
-				<a href="purchase-add.php">Add New Purchase</a>
-				<a href="purchase-view.php">Manage Purchases</a>
-			</div>
-			<button class="dropdown-btn">Employees
-			<i class="down"></i>
-			</button>
-			<div class="dropdown-container">
-				<a href="employee-add.php">Add New Employee</a>
-				<a href="employee-view.php">Manage Employees</a>
-			</div>
-			<button class="dropdown-btn">Customers
-			<i class="down"></i>
-			</button>
-			<div class="dropdown-container">
-				<a href="customer-add.php">Add New Customer</a>
-				<a href="customer-view.php">Manage Customers</a>
-			</div>
-			<a href="sales-view.php">View Sales Invoice Details</a>
-			<a href="salesitems-view.php">View Sold Products Details</a>
-			<a href="pos1.php">Add New Sale</a>
-			<button class="dropdown-btn">Reports
-			<i class="down"></i>
-			</button>
-			<div class="dropdown-container">
-				<a href="stockreport.php">Medicines - Low Stock</a>
-				<a href="expiryreport.php">Medicines - Soon to Expire</a>
-				<a href="salesreport.php">Transactions Reports</a>
-			</div>
-	</div>
+    <div class="sidenav">
+        <a href="adminmainpage.php">Dashboard</a>
+        <button class="dropdown-btn">Inventory
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="inventory-add.php">Add New Medicine</a>
+            <a href="inventory-view.php">Manage Inventory</a>
+        </div>
+        <button class="dropdown-btn">Suppliers
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="supplier-add.php">Add New Supplier</a>
+            <a href="supplier-view.php">Manage Suppliers</a>
+        </div>
+        <button class="dropdown-btn">Stock Purchase
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="purchase-add.php">Add New Purchase</a>
+            <a href="purchase-view.php">Manage Purchases</a>
+        </div>
+        <button class="dropdown-btn">Employees
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="employee-add.php">Add New Employee</a>
+            <a href="employee-view.php">Manage Employees</a>
+        </div>
+        <button class="dropdown-btn">Customers
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="customer-add.php">Add New Customer</a>
+            <a href="customer-view.php">Manage Customers</a>
+        </div>
+        <a href="sales-view.php">View Sales Invoice Details</a>
+        <a href="salesitems-view.php">View Sold Products Details</a>
+        <a href="pos1.php">Add New Sale</a>
+        <button class="dropdown-btn">Reports
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="stockreport.php">Medicines - Low Stock</a>
+            <a href="expiryreport.php">Medicines - Soon to Expire</a>
+            <a href="salesreport.php">Transactions Reports</a>
+        </div>
+    </div>
 
-	<div class="topnav">
-		<a href="logout.php">Logout</a>
-	</div>
-	
-	<center>
-	<div class="head">
-	<h2> POINT OF SALE</h2>
-	</div>
-	</center>
-	
+    <div class="topnav">
+        <h3><a href="logout.php" style="color: white;">Logout</a></h3>
+        <h2>Pharmacy Management System</h2>
+    </div>
 
-	<form action="<?=$_SERVER['PHP_SELF']?>" method="post">
-		<center>
-		
-		<select id="cid" name="cid">
-        <option value="0" selected="selected">*Select Customer ID (only once for a customer's sales)</option>
-					
-					
-	<?php	
-			
-		include "config.php";
-		$qry="SELECT c_id FROM customer";
-		$result= $conn->query($qry);
-		echo mysqli_error($conn);
-		if ($result->num_rows > 0) {
-			while($row = $result->fetch_assoc()) {
-				echo "<option>".$row["c_id"]."</option>";
-			}
-		}
-	?>
-		
-    </select>
-	&nbsp;&nbsp;
-	<input type="submit" name="custadd" value="Add to Proceed.">
-	</form>
+    <div class="content">
+    
+            <div class="head">
+                <h2>Point of Sale Details</h2>
+            </div>
+        
+
+       
 	
-		
 	<?php
-	
-		session_start();
-		
-		$qry1="SELECT id from admin where a_username='$_SESSION[user]'";
-		$result1=$conn->query($qry1);
-		$row1=$result1->fetch_row();
-		$eid=$row1[0];
-		
-			if(isset($_GET['sid'])) 
-			{
-				$sid=$_GET['sid'];
-			}
-			
-			if(isset($_POST['cid']))
-				$cid=$_POST['cid'];
-			
-		if(isset($_POST['custadd'])) {
-			
-				$qry2="INSERT INTO sales(c_id,e_id) VALUES ('$cid','$eid')"; 
-				if(!($result2=$conn->query($qry2))) {
-					echo "<p style='font-size:8; color:red;'>Invalid! Enter valid Customer ID to record Sales.</p>";
-				}
-		}
-	?>
-			
-		<form method="post">
-			<select id="med" name="med">
-			<option value="0" selected="selected">Select Medicine</option>
-					
-					
-	<?php	
-		$qry3="SELECT med_name FROM meds";
-		$result3 = $conn->query($qry3);
-		echo mysqli_error($conn);
-		if ($result3->num_rows > 0) {
-			while($row4 = $result3->fetch_assoc()) {
-				
-				echo "<option>".$row4["med_name"]."</option>";
-			}
-		}
-	?>
-		
-    </select>
-	&nbsp;&nbsp;
-	<input type="submit" name="search" value="Search">
-	</form>
-	
-	<br><br><br>
-	</center>
-	
 
-	<?php
-	
-		if(isset($_POST['search'])&&! empty($_POST['med'])) {
-			
-					$med=$_POST['med'];
-					$qry4="SELECT * FROM meds where med_name='$med'";
-					$result4=$conn->query($qry4); 
-					$row4 = $result4 -> fetch_row();
-				
-			}
-	?>
-	
-			<div class="one row" style="margin-right:160px;">
-			<form method="post">
-					<div class="column">
-					
-					<label for="medid">Medicine ID:</label>
-					<input type="number" name="medid" value="<?php echo $row4[0]; ?>"readonly ><br><br>
-					
-					<label for="mdname">Medicine Name:</label>
-					<input type="text" name="mdname" value="<?php echo $row4[1]; ?>" readonly><br><br>
-					
-					</div>
-					<div class="column">
-					
-					<label for="mcat">Category:</label>
-					<input type="text" name="mcat" value="<?php echo $row4[3]; ?>" readonly><br><br>
-					
-					<label for="mloc">Location:</label>
-					<input type="text" name="mloc" value="<?php echo $row4[5]; ?>" readonly><br><br>
-					
-					</div>
-					<div class="column">
-					
-					<label for="mqty">Quantity Available:</label>
-					<input type="number" name="mqty" value="<?php echo $row4[2]; ?>" readonly><br><br>
-					
-					<label for="mprice">Price of One Unit:</label>
-					<input type="number" name="mprice" value="<?php echo $row4[4]; ?>" readonly><br><br>
-					
-					</div>
-					<label for="mcqty">Quantity Required:</label>
-					<input type="number" name="mcqty">
-					&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="add" value="Add Medicine">&nbsp;&nbsp;&nbsp;
-	
-		<?php
-		
-		if(isset($_POST['add'])) {
-			
-					$qry5="select sale_id from sales ORDER BY sale_id DESC LIMIT 1";
-					$result5=$conn->query($qry5); 
-					$row5=$result5->fetch_row();
-					$sid=$row5[0];
-					echo mysqli_error($conn);
-			
-					$mid=$_POST['medid'];
-					$aqty=$_POST['mqty'];
-					$qty=$_POST['mcqty'];
-					
-					if($qty>$aqty||$qty==0)
-					{echo "QUANTITY INVALID!";}
-					else {
-					$price=$_POST['mprice']*$qty;
-					$qry6="INSERT INTO sales_items(`sale_id`,`med_id`,`sale_qty`,`tot_price`) VALUES($sid,$mid,$qty,$price)";
-					$result6 = mysqli_query($conn,$qry6);
-					echo mysqli_error($conn);
-					
-					echo "<br><br> <center>";
-					echo "<a class='button1 view-btn' href=pos2.php?sid=".$sid.">View Order</a>";
-					echo "</center>";
-					}
-		}	
-		?>
 
-		
-		</form>
-	</div>
+// Ensure session variable is set
+if (!isset($_SESSION['user'])) {
+    die("User session not found.");
+}
+
+// Function to sanitize input
+function sanitize_input($data, $conn) {
+    return htmlspecialchars(mysqli_real_escape_string($conn, $data));
+}
+
+// Displaying any errors for debugging (remove in production)
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+?>
+
+
+   
+
+
+<div class="container">
+   
+    <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
+        <label for="cid">Customer ID:</label>
+        <select id="cid" name="cid">
+            <option value="0" selected>*Select Customer ID</option>
+            <?php
+            $qry = "SELECT c_id FROM customer";
+            $result = $conn->query($qry);
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<option>" . sanitize_input($row["c_id"], $conn) . "</option>";
+                }
+            }
+            ?>
+        </select>
+        <input type="submit" name="custadd" value="Add to Proceed">
+    </form>
+
+    <?php
+    if (isset($_POST['custadd']) && !empty($_POST['cid'])) {
+        $cid = sanitize_input($_POST['cid'], $conn);
+        $qry1 = "SELECT id FROM admin WHERE a_username = ?";
+        $stmt = $conn->prepare($qry1);
+        $stmt->bind_param("s", $_SESSION['user']);
+        $stmt->execute();
+        $stmt->bind_result($eid);
+        $stmt->fetch();
+        $stmt->close();
+
+        $qry2 = "INSERT INTO sales (c_id, e_id) VALUES (?, ?)";
+        $stmt2 = $conn->prepare($qry2);
+        $stmt2->bind_param("ii", $cid, $eid);
+
+        if ($stmt2->execute()) {
+            echo "<p>Customer added successfully.</p>";
+        } else {
+            echo "<p class='error-message'>Error: Invalid Customer ID.</p>";
+        }
+        $stmt2->close();
+    }
+    ?>
+
+    <form method="post">
+        <label for="med">Medicine:</label>
+        <select id="med" name="med">
+            <option value="0" selected>Select Medicine</option>
+            <?php
+            $qry3 = "SELECT med_name FROM meds";
+            $result3 = $conn->query($qry3);
+            if ($result3->num_rows > 0) {
+                while ($row = $result3->fetch_assoc()) {
+                    echo "<option>" . sanitize_input($row["med_name"], $conn) . "</option>";
+                }
+            }
+            ?>
+        </select>
+        <input type="submit" name="search" value="Search">
+    </form>
+
+    <?php
+    if (isset($_POST['search']) && !empty($_POST['med'])) {
+        $med = sanitize_input($_POST['med'], $conn);
+        $qry4 = "SELECT * FROM meds WHERE med_name = ?";
+        $stmt = $conn->prepare($qry4);
+        $stmt->bind_param("s", $med);
+        $stmt->execute();
+        $result4 = $stmt->get_result();
+        if ($row4 = $result4->fetch_assoc()) {
+            // Display results
+        }
+        $stmt->close();
+    }
+    ?>
+</div>
+    </div>
+
+    
+
 </body>
-
-<script>
-		var dropdown = document.getElementsByClassName("dropdown-btn");
-		var i;
-
-			for (i = 0; i < dropdown.length; i++) {
-			  dropdown[i].addEventListener("click", function() {
-			  this.classList.toggle("active");
-			  var dropdownContent = this.nextElementSibling;
-			  if (dropdownContent.style.display === "block") {
-			  dropdownContent.style.display = "none";
-			  } else {
-			  dropdownContent.style.display = "block";
-			  }
-			  });
-			}	
-</script>
 
 </html>

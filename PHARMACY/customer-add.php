@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="nav2.css">
     <link rel="stylesheet" type="text/css" href="form4.css">
+    <link rel="stylesheet" type="text/css" href="nav2.css">
+    <link rel="stylesheet" type="text/css" href="form3.css">
+    <link rel="stylesheet" type="text/css" href="table2.css">
     <title>Add Customers
     </title>
     <link rel="icon" type="image/x-icon" href="icon.png">
@@ -180,7 +183,7 @@
 
     <div class="topnav">
         <h3><a href="logout.php" style="color: white;">Logout</a></h3>
-        <h2>MediCure Pharmacy </h2>
+        <h2>Pharmacy Management System</h2>
     </div>
 
     <div class="content">
@@ -190,7 +193,7 @@
             </div>
         
 
-        <div class="one">
+        <div class="one1">
             <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
                 <div class="form-row">
                     <div class="form-group col-md-6">

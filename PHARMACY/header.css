@@ -33,3 +33,29 @@ div.head::before {
   height: 100%;
   background-color: #7E60BF; /* Accent color to the left side using provided color */
 }
+
+.footer {
+  background-color: #7E60BF;
+  color: white;
+  text-align: center;
+  padding: 10px 0; /* Reduced padding */
+  font-size: 12px; /* Decreased font size */
+  margin-top: 30px; /* Reduced margin */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 3px 0; /* Reduced margin */
+}
+
+.social-media {
+  margin-top: 8px; /* Reduced margin */
+}
+
+.social-icon {
+  margin: 0 8px; /* Reduced margin */
+  font-size: 18px; /* Decreased icon size */
+  transition: color 0.3s ease, transform 0.2s ease;
+}

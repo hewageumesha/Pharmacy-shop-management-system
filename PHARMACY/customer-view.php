@@ -156,7 +156,7 @@
 
     <div class="topnav">
         <h3><a href="logout.php" style="color: white;">Logout</a></h3>
-        <h2>MediCure Pharmacy</h2>
+        <h2>Pharmacy Management System</h2>
     </div>
 
     <div class="content">
@@ -165,7 +165,7 @@
                 <h2>View Customer Details</h2>
             </div>
 		
-			<table  id="table1" style="margin-right:100px;">
+			<table  id="table4" style="margin-right:100px;">
 		<tr>
 			<th>Customer ID</th>
 			<th>First Name</th>
