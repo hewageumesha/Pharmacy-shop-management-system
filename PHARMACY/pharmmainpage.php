@@ -10,12 +10,59 @@ Pharmacist Dashboard
 </head>
 <style>
 body {font-family:Arial;}
+
+.image-container {
+        position: relative;
+        display: inline-block;
+        margin-top: 150px;
+        margin-left: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .image-container:hover {
+        transform: scale(1.05); /* Slight zoom-in effect on hover */
+    }
+
+    .image-container img {
+        width: 280px;
+        height: 275px;
+        border-radius: 50%; /* Make the images circular */
+        border: 4px solid #333; /* Add border */
+        padding: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    }
+
+    /* Tooltip styling */
+    .tooltip-text {
+        visibility: hidden;
+        width: 150px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 8px;
+        padding: 8px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 14px;
+        margin-top: 10px; /* Space between image and tooltip */
+    }
+
+    /* Show tooltip on hover */
+    .image-container:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
 </style>
 
 <body>
 
 	<div class="sidenav">
-			<h2 style="font-family:Arial; color:white; text-align:center;"> PHARMACIA </h2>
+			<h2 style="font-family:Arial; color:white; text-align:center;"> MediCure Pharmacy
+				 </h2>
 			<a href="pharmmainpage.php">Dashboard</a>
 			
 			<a href="pharm-inventory.php">View Inventory</a>
@@ -52,13 +99,20 @@ body {font-family:Arial;}
 	</div>
 	</center>
 	
-	<a href="pharm-pos1.php" title="Add New Sale">
-	<img src="carticon1.png" style="padding:8px;margin-left:550px;margin-top:40px;width:200px;height:200px;border:2px solid black;" alt="Add New Sale">
-	</a>
-	
-	<a href="pharm-inventory.php" title="View Inventory">
-	<img src="inventory.png" style="padding:8px;margin-left:100px;margin-top:40px;width:200px;height:200px;border:2px solid black;" alt="Inventory">
-	</a>
+	<div class="image-container" style="padding-left: 480px;">
+    <a href="pos1.php">
+       <img src="2.png" alt="Add New Sale" >
+
+        <div class="tooltip-text">Add New Sale</div>
+    </a>
+</div>
+
+<div class="image-container">
+    <a href="inventory-view.php">
+        <img src="4.png" alt="View Inventory">
+        <div class="tooltip-text">View Inventory</div>
+    </a>
+</div>
 	
 </body>
 

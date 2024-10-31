@@ -4,8 +4,8 @@
 <head>
 <link rel="stylesheet" type="text/css" href="login1.css">
 <div class="header">
-<h1>PHARMACIA</h1>
-<p style="margin-top:-20px;line-height:1;font-size:30px;">Pharmacy Management System</p>
+<h1>MediCure Pharmacy</h1>
+<p style="margin-top:-20px;line-height:1;font-size:30px;">MediCure Pharmacy </p>
 </div>
 <title>
 Pharmacia 

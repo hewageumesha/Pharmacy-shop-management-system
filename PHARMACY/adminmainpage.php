@@ -79,6 +79,52 @@
             margin-top: 60px; /* Adjust according to the height of the top nav */
             padding-left: 260px; /* Space for the sidenav */
         }
+
+        .image-container {
+        position: relative;
+        display: inline-block;
+        margin-top: 150px;
+        margin-left: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .image-container:hover {
+        transform: scale(1.05); /* Slight zoom-in effect on hover */
+    }
+
+    .image-container img {
+        width: 180px;
+        height: 175px;
+        border-radius: 50%; /* Make the images circular */
+        border: 4px solid #333; /* Add border */
+        padding: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    }
+
+    /* Tooltip styling */
+    .tooltip-text {
+        visibility: hidden;
+        width: 150px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 8px;
+        padding: 8px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 14px;
+        margin-top: 10px; /* Space between image and tooltip */
+    }
+
+    /* Show tooltip on hover */
+    .image-container:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
     </style>
     <script>
         $(document).ready(function() {
@@ -158,7 +204,7 @@
     <div class="topnav">
     
     <h3><a href="logout.php">Logout (Logged in as Admin)</a><h3>
-    <h2>Pharmacy Management System</h2>
+    <h2>MediCure Pharmacy</h2>
     </div>
     
     <div class="content">
@@ -168,25 +214,41 @@
             </div>
         </center>
         
-        <a href="pos1.php" title="Add New Sale">
-            <img src="carticon1.png" style="padding:8px;margin-left:150px;margin-top:40px;width:200px;height:200px;border:2px solid black;" alt="Add New Sale">
-        </a>
-        
-        <a href="inventory-view.php" title="View Inventory">
-            <img src="inventory.png" style="padding:8px;margin-left:100px;margin-top:40px;width:200px;height:200px;border:2px solid black;" alt="Inventory">
-        </a>
-        
-        <a href="employee-view.php" title="View Employees">
-            <img src="emp.png" style="padding:8px;margin-left:100px;margin-top:40px;width:200px;height:200px;border:2px solid black;" alt="Employees List">
-        </a>
-        <br>
-        <a href="salesreport.php" title="View Transactions">
-            <img src="moneyicon.png" style="padding:8px;margin-left:150px;margin-top:40px;width:200px;height:200px;border:2px solid black;" alt="Transactions List">
-        </a>
-        
-        <a href="stockreport.php" title="Low Stock Alert">
-            <img src="alert.png" style="padding:8px;margin-left:100px;margin-top:40px;width:200px;height:200px;border:2px solid black;" alt="Low Stock Report">
-        </a>
+        <div class="image-container" style="padding-left: 80px;">
+    <a href="pos1.php">
+       <img src="2.png" alt="Add New Sale" >
+
+        <div class="tooltip-text">Add New Sale</div>
+    </a>
+</div>
+
+<div class="image-container">
+    <a href="inventory-view.php">
+        <img src="4.png" alt="View Inventory">
+        <div class="tooltip-text">View Inventory</div>
+    </a>
+</div>
+
+<div class="image-container">
+    <a href="employee-view.php">
+        <img src="3.png" alt="Employees List">
+        <div class="tooltip-text">View Employees</div>
+    </a>
+</div>
+
+<div class="image-container">
+    <a href="salesreport.php">
+        <img src="5.png" alt="Transactions List">
+        <div class="tooltip-text">View Transactions</div>
+    </a>
+</div>
+
+<div class="image-container">
+    <a href="stockreport.php">
+        <img src="1.png" alt="Low Stock Report">
+        <div class="tooltip-text">Low Stock Alert</div>
+    </a>
+</div>
     </div>
 
 </body>

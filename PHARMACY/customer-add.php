@@ -180,7 +180,7 @@
 
     <div class="topnav">
         <h3><a href="logout.php" style="color: white;">Logout</a></h3>
-        <h2>Pharmacy Management System</h2>
+        <h2>MediCure Pharmacy </h2>
     </div>
 
     <div class="content">

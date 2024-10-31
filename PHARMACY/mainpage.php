@@ -72,7 +72,7 @@
 <body>
 
     <div class="header">
-            <h1>Pharmacy Management System</h1>
+            <h1>MediCure Pharmacy</h1>
             <p style="margin-top:-20px;line-height:1;font-size:30px;">Welcome!</p>
     </div>
 
@@ -125,7 +125,7 @@
 
     <!-- Footer Section -->
     <footer class="footer">
-        <p>&copy; 2024 Pharmacy Management System. All rights reserved.</p>
+        <p>&copy; 2024 MediCure Pharmacy. All rights reserved.</p>
         <p>
             <a href="aboutus.html" class="footer-link">About Us</a> |
             Contact us: <a href="mailto:support@ruh_pharmacy_ms.com">support@ruh_pharmacy_ms.com</a>
